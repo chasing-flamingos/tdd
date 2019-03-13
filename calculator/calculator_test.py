@@ -17,6 +17,15 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(0, calculator.add(0, 0, 0))
         self.assertEqual(1, calculator.add(1))
 
+    def test_add_no_arguments(self):
+        with self.assertRaises(RuntimeError) as cm:
+            calculator.add()
+
+        self.assertEqual(
+            "add() needs at least one argument. None was given.",
+            str(cm.exception)
+        )
+
     def test_substract(self):
         self.assertEqual(2, calculator.substract(6, 4))
         self.assertEqual(6, calculator.substract(2, -4))
