@@ -6,4 +6,6 @@ class RomanNumeral:
     def __str__(self):
         if self.value == 1:
             return 'I'
+        if self.value == 5:
+            return 'V'
         return ''
