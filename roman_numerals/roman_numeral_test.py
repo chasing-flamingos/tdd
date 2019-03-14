@@ -55,5 +55,20 @@ class TestRomanNumeral(unittest.TestCase):
         self.assertEqual('XXI', str(RomanNumeral(21)))
         self.assertEqual('XXXIV', str(RomanNumeral(34)))
 
+    def test_symbol_combinations_for_L(self):
+        self.assertEqual('LI', str(RomanNumeral(51)))
+        self.assertEqual('LII', str(RomanNumeral(52)))
+        self.assertEqual('LIII', str(RomanNumeral(53)))
+        self.assertEqual('LIV', str(RomanNumeral(54)))
+        self.assertEqual('LV', str(RomanNumeral(55)))
+        self.assertEqual('LVI', str(RomanNumeral(56)))
+        self.assertEqual('LVII', str(RomanNumeral(57)))
+        self.assertEqual('LVIII', str(RomanNumeral(58)))
+        self.assertEqual('LIX', str(RomanNumeral(59)))
+        self.assertEqual('LX', str(RomanNumeral(60)))
+        self.assertEqual('LXII', str(RomanNumeral(62)))
+        self.assertEqual('LXXVI', str(RomanNumeral(76)))
+        self.assertEqual('LXXXIX', str(RomanNumeral(89)))
+
 if __name__ == '__main__':
     unittest.main()

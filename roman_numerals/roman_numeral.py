@@ -16,8 +16,8 @@ class RomanNumeral:
             return str(RomanNumeral(1)) + str(RomanNumeral(10))
         if self.value in range(10, 40):
             return 'X' * floor(self.value / 10) + str(RomanNumeral(self.value % 10))
-        if self.value == 50:
-            return 'L'
+        if self.value in range(50, 90):
+            return 'L' + str(RomanNumeral(self.value - 50))
         if self.value == 100:
             return 'C'
         if self.value == 500:
