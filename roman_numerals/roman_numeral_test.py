@@ -37,5 +37,10 @@ class TestRomanNumeral(unittest.TestCase):
         self.assertEqual('VII', str(RomanNumeral(7)))
         self.assertEqual('VIII', str(RomanNumeral(8)))
 
+    def test_symbol_combinations_for_X(self):
+        self.assertEqual('IX', str(RomanNumeral(9)))
+        self.assertEqual('XX', str(RomanNumeral(20)))
+        self.assertEqual('XXX', str(RomanNumeral(30)))
+
 if __name__ == '__main__':
     unittest.main()
