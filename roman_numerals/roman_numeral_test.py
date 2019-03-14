@@ -15,5 +15,8 @@ class TestRomanNumeral(unittest.TestCase):
     def test_ten_symbol_is_X(self):
         self.assertEqual('X', str(RomanNumeral(10)))
 
+    def test_fifty_symbol_is_L(self):
+        self.assertEqual('L', str(RomanNumeral(50)))
+
 if __name__ == '__main__':
     unittest.main()
