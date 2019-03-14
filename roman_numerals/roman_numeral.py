@@ -4,8 +4,8 @@ class RomanNumeral:
         self.value = value
 
     def __str__(self):
-        if self.value == 1:
-            return 'I'
+        if self.value in range(1, 4):
+            return 'I' * self.value
         if self.value == 5:
             return 'V'
         if self.value == 10:

@@ -27,5 +27,9 @@ class TestRomanNumeral(unittest.TestCase):
     def test_thousand_sybol_is_M(self):
         self.assertEqual('M', str(RomanNumeral(1000)))
 
+    def test_symbol_combinations_for_I(self):
+        self.assertEqual('II', str(RomanNumeral(2)))
+        self.assertEqual('III', str(RomanNumeral(3)))
+
 if __name__ == '__main__':
     unittest.main()
