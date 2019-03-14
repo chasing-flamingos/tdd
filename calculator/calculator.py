@@ -10,5 +10,9 @@ def add(*args):
         sum += n
     return sum
 
-def substract(a, b):
-    return add(a, negative(b))
+def substract(*args):
+    difference = args[0]
+
+    for n in args[1::]:
+        difference = add(difference, negative(n))
+    return difference

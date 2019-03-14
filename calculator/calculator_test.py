@@ -32,5 +32,13 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(-4, calculator.substract(-2, 2))
         self.assertEqual(0, calculator.substract(-2, -2))
 
+    def test_substract_many_numbers(self):
+        self.assertEqual(1, calculator.substract(10, 2, 3, 4))
+        self.assertEqual(14, calculator.substract(5, -3, -4, -2))
+        self.assertEqual(3, calculator.substract(2, 3, -4))
+        self.assertEqual(0, calculator.substract(2, 2))
+        self.assertEqual(1, calculator.substract(1))
+
+
 if __name__ == '__main__':
     unittest.main()
