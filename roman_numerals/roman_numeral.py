@@ -1,3 +1,5 @@
+from math import floor
+
 class RomanNumeral:
 
     def __init__(self, value = 0):
@@ -8,18 +10,12 @@ class RomanNumeral:
             return 'I' * self.value
         if self.value == 4:
             return str(RomanNumeral(1)) + str(RomanNumeral(5))
-        if self.value == 5:
-            return 'V'
-        if self.value in range(6, 9):
-            return str(RomanNumeral(5)) + str(RomanNumeral(self.value - 5))
+        if self.value in range(5, 9):
+            return 'V' + str(RomanNumeral(self.value - 5))
         if self.value == 9:
             return str(RomanNumeral(1)) + str(RomanNumeral(10))
-        if self.value == 10:
-            return 'X'
-        if self.value == 20:
-            return 'XX'
-        if self.value == 30:
-            return 'XXX'
+        if self.value in range(10, 40):
+            return 'X' * floor(self.value / 10) + str(RomanNumeral(self.value % 10))
         if self.value == 50:
             return 'L'
         if self.value == 100:

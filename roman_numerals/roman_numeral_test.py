@@ -42,5 +42,18 @@ class TestRomanNumeral(unittest.TestCase):
         self.assertEqual('XX', str(RomanNumeral(20)))
         self.assertEqual('XXX', str(RomanNumeral(30)))
 
+    def test_symbols_for_double_digits(self):
+        self.assertEqual('XI', str(RomanNumeral(11)))
+        self.assertEqual('XII', str(RomanNumeral(12)))
+        self.assertEqual('XIII', str(RomanNumeral(13)))
+        self.assertEqual('XIV', str(RomanNumeral(14)))
+        self.assertEqual('XV', str(RomanNumeral(15)))
+        self.assertEqual('XVI', str(RomanNumeral(16)))
+        self.assertEqual('XVII', str(RomanNumeral(17)))
+        self.assertEqual('XVIII', str(RomanNumeral(18)))
+        self.assertEqual('XIX', str(RomanNumeral(19)))
+        self.assertEqual('XXI', str(RomanNumeral(21)))
+        self.assertEqual('XXXIV', str(RomanNumeral(34)))
+
 if __name__ == '__main__':
     unittest.main()
