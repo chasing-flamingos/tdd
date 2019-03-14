@@ -18,5 +18,8 @@ class TestRomanNumeral(unittest.TestCase):
     def test_fifty_symbol_is_L(self):
         self.assertEqual('L', str(RomanNumeral(50)))
 
+    def test_hundred_symbol_is_C(self):
+        self.assertEqual('C', str(RomanNumeral(100)))
+
 if __name__ == '__main__':
     unittest.main()
