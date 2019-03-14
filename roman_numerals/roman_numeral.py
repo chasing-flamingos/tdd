@@ -8,4 +8,6 @@ class RomanNumeral:
             return 'I'
         if self.value == 5:
             return 'V'
+        if self.value == 10:
+            return 'X'
         return ''
