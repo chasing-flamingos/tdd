@@ -6,8 +6,12 @@ class RomanNumeral:
     def __str__(self):
         if self.value in range(1, 4):
             return 'I' * self.value
+        if self.value == 4:
+            return str(RomanNumeral(1)) + str(RomanNumeral(5))
         if self.value == 5:
             return 'V'
+        if self.value in range(6, 9):
+            return str(RomanNumeral(5)) + str(RomanNumeral(self.value - 5))
         if self.value == 10:
             return 'X'
         if self.value == 50:
