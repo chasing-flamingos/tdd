@@ -11,8 +11,10 @@ def add(*args):
     return sum
 
 def substract(*args):
-    difference = args[0]
+    if len(args) < 1:
+        raise RuntimeError("substract() needs at least one argument. None was given.")
 
+    difference = args[0]
     for n in args[1::]:
         difference = add(difference, negative(n))
     return difference

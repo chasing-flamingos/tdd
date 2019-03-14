@@ -39,6 +39,15 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(0, calculator.substract(2, 2))
         self.assertEqual(1, calculator.substract(1))
 
+    def test_substract_no_arguments(self):
+        with self.assertRaises(RuntimeError) as cm:
+            calculator.substract()
+
+        self.assertEqual(
+            "substract() needs at least one argument. None was given.",
+            str(cm.exception)
+        )
+
 
 if __name__ == '__main__':
     unittest.main()
