@@ -14,4 +14,6 @@ class RomanNumeral:
             return 'L'
         if self.value == 100:
             return 'C'
+        if self.value == 500:
+            return 'D'
         return ''
