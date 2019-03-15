@@ -27,6 +27,9 @@ class RomanNumeral:
         if self.value in range(50, 90):
             return 'L' + str(RomanNumeral(self.value - 50))
 
+        if self.value in range(90, 100):
+            return str(RomanNumeral(10)) + str(RomanNumeral(100)) + str(RomanNumeral(self.value % 10))
+
         if self.value == 100:
             return 'C'
 
