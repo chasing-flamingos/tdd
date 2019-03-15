@@ -70,5 +70,17 @@ class TestRomanNumeral(unittest.TestCase):
         self.assertEqual('LXXVI', str(RomanNumeral(76)))
         self.assertEqual('LXXXIX', str(RomanNumeral(89)))
 
+    def test_symbols_for_numbers_between_forty_and_fifty(self):
+        self.assertEqual('XL', str(RomanNumeral(40)))
+        self.assertEqual('XLI', str(RomanNumeral(41)))
+        self.assertEqual('XLII', str(RomanNumeral(42)))
+        self.assertEqual('XLIII', str(RomanNumeral(43)))
+        self.assertEqual('XLIV', str(RomanNumeral(44)))
+        self.assertEqual('XLV', str(RomanNumeral(45)))
+        self.assertEqual('XLVI', str(RomanNumeral(46)))
+        self.assertEqual('XLVII', str(RomanNumeral(47)))
+        self.assertEqual('XLVIII', str(RomanNumeral(48)))
+        self.assertEqual('XLIX', str(RomanNumeral(49)))
+
 if __name__ == '__main__':
     unittest.main()
