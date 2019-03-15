@@ -107,5 +107,13 @@ class TestRomanNumeral(unittest.TestCase):
         self.assertEqual('CCCI', str(RomanNumeral(301)))
         self.assertEqual('CCCXCIX', str(RomanNumeral(399)))
 
+    def test_symbols_for_numbers_between_four_hundred_and_five_hundred(self):
+        self.assertEqual('CD', str(RomanNumeral(400)))
+        self.assertEqual('CDI', str(RomanNumeral(401)))
+        self.assertEqual('CDV', str(RomanNumeral(405)))
+        self.assertEqual('CDX', str(RomanNumeral(410)))
+        self.assertEqual('CDL', str(RomanNumeral(450)))
+        self.assertEqual('CDXCIX', str(RomanNumeral(499)))
+
 if __name__ == '__main__':
     unittest.main()

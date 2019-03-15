@@ -36,6 +36,9 @@ class RomanNumeral:
         if self.value == 500:
             return 'D'
 
+        if self.value in range(400, 500):
+            return str(RomanNumeral(100)) + str(RomanNumeral(500)) + str(RomanNumeral(self.value % 100))
+
         if self.value == 1000:
             return 'M'
 
