@@ -140,5 +140,14 @@ class TestRomanNumeral(unittest.TestCase):
         self.assertEqual('DCCCL', str(RomanNumeral(850)))
         self.assertEqual('DCCCXCIX', str(RomanNumeral(899)))
 
+    def test_symbols_for_numbers_between_nine_hundred_and_thousand(self):
+        self.assertEqual('CM', str(RomanNumeral(900)))
+        self.assertEqual('CMI', str(RomanNumeral(901)))
+        self.assertEqual('CMV', str(RomanNumeral(905)))
+        self.assertEqual('CMX', str(RomanNumeral(910)))
+        self.assertEqual('CML', str(RomanNumeral(950)))
+        self.assertEqual('CMXCIX', str(RomanNumeral(999)))
+
+
 if __name__ == '__main__':
     unittest.main()

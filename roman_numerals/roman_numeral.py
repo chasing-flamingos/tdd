@@ -39,6 +39,9 @@ class RomanNumeral:
         if self.value in range(500, 900):
             return 'D' + str(RomanNumeral(self.value % 500))
 
+        if self.value in range(900, 1000):
+            return str(RomanNumeral(100)) + str(RomanNumeral(1000)) + str(RomanNumeral(self.value % 100))
+
         if self.value == 1000:
             return 'M'
 
