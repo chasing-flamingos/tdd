@@ -148,6 +148,25 @@ class TestRomanNumeral(unittest.TestCase):
         self.assertEqual('CML', str(RomanNumeral(950)))
         self.assertEqual('CMXCIX', str(RomanNumeral(999)))
 
+    def test_symbols_for_numbers_between_one_thousand_and_five_thousand(self):
+        self.assertEqual('MI', str(RomanNumeral(1001)))
+        self.assertEqual('MV', str(RomanNumeral(1005)))
+        self.assertEqual('MX', str(RomanNumeral(1010)))
+        self.assertEqual('ML', str(RomanNumeral(1050)))
+        self.assertEqual('MXCIX', str(RomanNumeral(1099)))
+        self.assertEqual('MCDI', str(RomanNumeral(1401)))
+        self.assertEqual('MD', str(RomanNumeral(1500)))
+        self.assertEqual('MCMXCIX', str(RomanNumeral(1999)))
+        self.assertEqual('MMI', str(RomanNumeral(2001)))
+        self.assertEqual('MMD', str(RomanNumeral(2500)))
+        self.assertEqual('MMCMXCIX', str(RomanNumeral(2999)))
+        self.assertEqual('MMMD', str(RomanNumeral(3500)))
+        self.assertEqual('MMMDCCCX', str(RomanNumeral(3810)))
+        self.assertEqual('MMMMI', str(RomanNumeral(4001)))
+        self.assertEqual('MMMMD', str(RomanNumeral(4500)))
+        self.assertEqual('MMMMCMXCIX', str(RomanNumeral(4999)))
+
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -45,4 +45,9 @@ class RomanNumeral:
         if self.value == 1000:
             return 'M'
 
+        if self.value in range(1000, 5000):
+            return 'M' * floor(self.value / 1000) + str(RomanNumeral(self.value % 1000))
+
+
+
         return ''
